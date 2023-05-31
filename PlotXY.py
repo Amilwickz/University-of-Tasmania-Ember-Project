@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #Read the CSV file
-df = pd.read_csv('C:/Users/amilaw/Desktop/Ember project/5. prt files processing/test4_proceeding_V3/Ember 1 post-processing/Particles_Tracking_Ember_1/trajectory_plotting_Ember_1.csv', skiprows=1)
+df = pd.read_csv('C:/Users/amilaw/Desktop/Ember project/5. prt files processing/test4_proceeding_V3/Ember 3 post-processing/Particle_Tracking_Ember_3/trajectory_plotting_Ember_3.csv', skiprows=1)
 
 #Extract the X, Y data of each ember from relevant Columns
 column_0 = df.iloc[:, 0]#1st column (index 0)
@@ -120,29 +120,30 @@ new_df_7 = pd.DataFrame(filtered_data_7)
 new_df_8 = pd.DataFrame(filtered_data_8)
 
 #write the data to a new CSV file called "plot"
-new_df_1.to_csv('plotXY_Cylinder_Ember1_small_distance.csv', index=False)
-new_df_2.to_csv('plotXY_Cylinder_Ember2_small_distance.csv', index=False)
-new_df_3.to_csv('plotXY_Cylinder_Ember3_medium_distance.csv', index=False)
-new_df_4.to_csv('plotXY_Cylinder_Ember4_medium_distance.csv', index=False)
-new_df_5.to_csv('plotXY_Cylinder_Ember5_medium_distance.csv', index=False)
-new_df_6.to_csv('plotXY_Cylinder_Ember6_long_distance.csv', index=False)
-new_df_7.to_csv('plotXY_Cylinder_Ember7_long_distance.csv', index=False)
-new_df_8.to_csv('plotXY_Cylinder_Ember8_long_distance.csv', index=False)
+new_df_1.to_csv('plotXY_Cube_Ember1_small_distance.csv', index=False)
+new_df_2.to_csv('plotXY_Cube_Ember2_small_distance.csv', index=False)
+new_df_3.to_csv('plotXY_Cube_Ember3_medium_distance.csv', index=False)
+new_df_4.to_csv('plotXY_Cube_Ember4_medium_distance.csv', index=False)
+new_df_5.to_csv('plotXY_Cube_Ember5_medium_distance.csv', index=False)
+new_df_6.to_csv('plotXY_Cube_Ember6_long_distance.csv', index=False)
+new_df_7.to_csv('plotXY_Cube_Ember7_long_distance.csv', index=False)
+new_df_8.to_csv('plotXY_Cube_Ember8_long_distance.csv', index=False)
 
-plt.plot(new_df_1['Column_0'],new_df_1['Column_1'], color= "dimgrey", label = "Ember ID_333522 (small distance)")
-plt.plot(new_df_2['Column_9'],new_df_2['Column_10'], color= "black", label = "Ember ID_368242 (small distance)")
-plt.plot(new_df_3['Column_18'],new_df_3['Column_19'],color= "darkorange", label = "Ember ID_327447 (medium distance)")
-plt.plot(new_df_4['Column_27'],new_df_4['Column_28'], color= "seagreen", label = "Ember ID_360738 (medium distance)")
-plt.plot(new_df_5['Column_36'],new_df_5['Column_37'], color= "orchid", label = "Ember ID_322855 (medium distance)")
-plt.plot(new_df_6['Column_45'],new_df_6['Column_46'], color= "darkblue", label = "Ember ID_381626 (long distance)")
-plt.plot(new_df_7['Column_54'],new_df_7['Column_55'], color= "teal", label = "Ember ID_390082 (long distance)")
-plt.plot(new_df_8['Column_63'],new_df_8['Column_64'],color= "red", label = "Ember ID_380926 (long distance)")
+plt.plot(new_df_1['Column_0'],new_df_1['Column_1'], color= "dimgrey", label = "Ember ID_457282 (small distance)")
+plt.plot(new_df_2['Column_9'],new_df_2['Column_10'], color= "black", label = "Ember ID_330694 (small distance)")
+plt.plot(new_df_3['Column_18'],new_df_3['Column_19'],color= "darkorange", label = "Ember ID_325459 (medium distance)")
+plt.plot(new_df_4['Column_27'],new_df_4['Column_28'], color= "seagreen", label = "Ember ID_414414 (medium distance)")
+plt.plot(new_df_5['Column_36'],new_df_5['Column_37'], color= "orchid", label = "Ember ID_338535 (medium distance)")
+plt.plot(new_df_6['Column_45'],new_df_6['Column_46'], color= "darkblue", label = "Ember ID_366618 (long distance)")
+plt.plot(new_df_7['Column_54'],new_df_7['Column_55'], color= "teal", label = "Ember ID_399574 (long distance)")
+plt.plot(new_df_8['Column_63'],new_df_8['Column_64'],color= "red", label = "Ember ID_351359 (long distance)")
 
-plt.title("Cylinder Embers' Trajectories")
+plt.title("Cube Embers' Trajectories")
 plt.xlabel("X (m)")
-plt.ylabel("Y (m)")
-plt.xlim(300, 600)
+plt.ylabel("Z (m)")
+plt.xlim(300, 700)
 plt.ylim(0,210)
 plt.legend()
 plt.grid()
 plt.show()
+
